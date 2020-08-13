@@ -7,12 +7,19 @@ let paragraph = `
   so well most times.
 `;
 
+let string = 'The wanderlust is ever so abundant inside.'
+
 const popWord = paragraph => {
 
 }
 
+// Reverse but needs to fix punctuation and capital letters
 const reverse = string => {
+  let reversed = [];
+  string.split(' ')
+    .map(word => reversed.unshift(word));
 
+  return reversed.join(' ');
 }
 
 const foo = string => {
@@ -22,3 +29,5 @@ const foo = string => {
 const longestWord = paragraph => {
   
 }
+
+console.log(reverse(string))
