@@ -1,3 +1,5 @@
+-- I decided to use PostgreSQL for this section
+
 -- Write a query that returns all posts posted in the past 24 hours
 SELECT * FROM posts WHERE time_posted BETWEEN NOW() - INTERVAL '24 HOURS' AND NOW();
 

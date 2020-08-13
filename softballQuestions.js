@@ -56,7 +56,17 @@ const foo = string => {
 
 const longestWord = paragraph => {
   let words = removePunctuations(paragraph)
+  let longest = '';
+  let longestLength = 0;
 
+  for(let i = 0; i < words.length; i++) {
+    if(words[i].length > longestLength) {
+      longest = words[i];
+      longestLength = words[i].length;
+    }
+  }
+
+  return longest;
 }
 
-console.log(popWord(paragraph))
+console.log(longestWord(paragraph))
