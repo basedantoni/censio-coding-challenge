@@ -1,13 +1,3 @@
-let paragraph =
-  `I think one of the hardest things in the world for people to do is to love themselves. If
-  you loved yourself you would take better care of yourself, and respect the things around
-  you because you respect yourself. Even the condition of your home whether clean or
-  dirty can reveal how much you love yourself. Just don't expect someone else to give
-  what you neglect to give yourself which is love. That's why relationships don't work out
-  so well most times.`;
-
-let string = 'Wanderlust is ever so abundant inside.'
-
 /* Remove punctuation and extra white spaces
 and converts each string to lower case */
 const removePunctuations = paragraph => {
@@ -16,6 +6,8 @@ const removePunctuations = paragraph => {
           .reduce((accum, word) => word ? accum.concat(word.toLowerCase()) : accum, [])
 }
 
+/* Write a function that takes a paragraph of text and tells 
+you what the most popular word is */
 const popWord = paragraph => {
   let words = removePunctuations(paragraph);
 
@@ -41,19 +33,17 @@ const popWord = paragraph => {
   return popularWord
 }
 
-// Reverse but needs to fix punctuation and capital letters
+// Write a function that takes a string and returns in in reverse order
 const reverse = string => {
   let reversed = [];
-  string.split(' ')
+  string.split('')
     .map(word => reversed.unshift(word));
 
-  return reversed.join(' ');
+  return reversed.join('');
 }
 
-const foo = string => {
-
-}
-
+/* Write a function that takes a paragraph and returns
+the largest word in the string */
 const longestWord = paragraph => {
   let words = removePunctuations(paragraph)
   let longest = '';
@@ -68,5 +58,3 @@ const longestWord = paragraph => {
 
   return longest;
 }
-
-console.log(longestWord(paragraph))
