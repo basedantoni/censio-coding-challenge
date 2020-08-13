@@ -8,11 +8,16 @@ let paragraph =
 
 let string = 'The wanderlust is ever so abundant inside.'
 
+/* Remove punctuation and extra white spaces
+and converts each string to lower case */
+const removePunctuations = paragraph => {
+  return paragraph.replace(/[^\w\d ']/g, '')
+          .split(' ')
+          .reduce((accum, word) => word ? accum.concat(word.toLowerCase()) : accum, [])
+}
+
 const popWord = paragraph => {
-  // Remove punctuation and extra white spaces
-  words = paragraph.replace(/[^\w\d ']/g, '')
-    .split(' ')
-    .filter(word => word);
+  let words = removePunctuations(paragraph);
 
   // Assign word as value and increment each time it occurs
   let wordDict = {}
@@ -50,6 +55,7 @@ const foo = string => {
 }
 
 const longestWord = paragraph => {
+  let words = 
 
 }
 
