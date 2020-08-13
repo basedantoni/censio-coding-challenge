@@ -6,7 +6,7 @@ let paragraph =
   what you neglect to give yourself which is love. That's why relationships don't work out
   so well most times.`;
 
-let string = 'The wanderlust is ever so abundant inside.'
+let string = 'Wanderlust is ever so abundant inside.'
 
 /* Remove punctuation and extra white spaces
 and converts each string to lower case */
@@ -55,7 +55,7 @@ const foo = string => {
 }
 
 const longestWord = paragraph => {
-  let words = 
+  let words = removePunctuations(paragraph)
 
 }
 
